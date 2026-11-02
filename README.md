@@ -16,9 +16,9 @@
 2. В **SQL Editor** выполните содержимое [`schema.sql`](schema.sql). В таблице профилей хранится только имя; полный номер остаётся в Supabase Auth.
 3. В настройках авторизации Supabase укажите URL будущего сайта GitHub Pages как разрешённый адрес.
 4. В [`config.js`](config.js) заполните `supabaseUrl` и `supabaseAnonKey` из настроек проекта Supabase. Для сайта в браузере предназначен только публичный anon/publishable key. **Не** вставляйте `service_role` key.
-5. Публикуйте проект в публичном репозитории GitHub. В **Settings → Pages** выберите источник **GitHub Actions**. Workflow автоматически опубликует сайт при каждом push в `main`.
+5. В **Settings → Pages** выберите источник **Deploy from a branch**, ветку `main` и папку `/` (root). GitHub Pages автоматически публикует обновления при изменении ветки.
 
-После этого участники смогут войти по SMS и писать в общие комнаты. Статические файлы сайта будут публиковаться через GitHub Pages при каждом обновлении `main`. Бесплатный проект Supabase может автоматически приостанавливаться при низкой активности за неделю; для непрерывной работы SMS и чатов нужна активность проекта или тариф без автоматической паузы. В демо-режиме учётная запись не подтверждается SMS и сообщения не синхронизируются между устройствами.
+После этого участники смогут войти по SMS и писать в общие комнаты. Статические файлы сайта публикуются через GitHub Pages при каждом обновлении `main`. Бесплатный проект Supabase может автоматически приостанавливаться при низкой активности за неделю; для непрерывной работы SMS и чатов нужна активность проекта или тариф без автоматической паузы. В демо-режиме учётная запись не подтверждается SMS и сообщения не синхронизируются между устройствами.
 
 ## Локальный запуск
 
@@ -29,4 +29,4 @@
 - [Supabase: вход по телефону](https://supabase.com/docs/guides/auth/phone-login)
 - [Supabase: signInWithOtp](https://supabase.com/docs/reference/javascript/auth-signinwithotp)
 - [Supabase: подписка на изменения базы](https://supabase.com/docs/guides/realtime/subscribing-to-database-changes)
-- [GitHub Pages с GitHub Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+- [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
